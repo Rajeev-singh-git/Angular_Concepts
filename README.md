@@ -1,27 +1,13 @@
-# ComponentDataBinding
+## commit 1 = Binding to Custom properties
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.4.
+In this commit, I Binded ["element"] property of ["server-element-component.ts"] to ["app.component.html]. Also, I assigned ["serverElement"] to the name of property in app.component.html.
 
-## Development server
+~Now, we can access [element] propety of ["server-componet"] from ["app-component"]
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## commit 2 = Assigning Alias
 
-## Code scaffolding
+We might not want to give original property name of component to other component who is accessing the property by binding.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+In our case, property ["element"] of [server-element-component] is accessed by [app-component]. We don't want [app-component] to use property name [element] to access prpoperty [element] of [server-element-component]. So, we can give name of our choice by ["Assigning an alias to cutom properties"].
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+~Here, we are assigning Alias name "[srvElement]"

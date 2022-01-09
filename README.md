@@ -23,4 +23,11 @@ Below, we are using Output decorator, b/z we are passing something out of compon
 
 @Output() serverCreated = new EventEmitter<{serverName:string, serverContent:string}>();
 
+## Commit 4 = Assigning an Alias to Custom EventEmitter
+
+Just like on '@Input()' on '@Output', we can also assign an alias like
+here for blueprint created.
+
+@Output('bpCreated') blueprintCreated = new EventEmitter<{serverName:string, serverContent:string}>();
+
 ## Commit 3 and commit 4 feature is available in branch (S2/Binding-Custom-Event)

@@ -1,5 +1,5 @@
 import { Component, } from '@angular/core';
-//import { type } from 'os';
+
 
 @Component({
   selector: 'app-root',
@@ -8,4 +8,20 @@ import { Component, } from '@angular/core';
 })
 export class AppComponent {
   serverElements =[{type:'server',name:'TestServer',content:'Just a Test!'}];
+
+  onServerAdded(serverData : {serverName:string, serverContent : string}){
+    this.serverElements.push({
+      type:'server',
+      name:serverData.serverName,
+      content:serverData.serverContent
+    });
+  }
+
+  onBluePrintAdded(bluePrintData : {serverName:string, serverContent : string}){
+    this.serverElements.push({
+      type:'bluePrint',
+      name:bluePrintData.serverName,
+      content:bluePrintData.serverContent
+    });
+  }
 }
